@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 90vw;
+  }
+}
+
+.panel {
+  flex: 1;
+  height: 80vh;
+  margin: 10px;
+  border-radius: 50px;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  justify-items: center;
+  align-items: end;
+  transition: flex 0.7s ease-in;
+}
+.panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
+    display: grid;
+  }
+}
+.panel--kost {
+  background-image: url("/images/kost.webp");
+}
+.panel--mumlava {
+  background-image: url("/images/mumlava.webp");
+}
+.panel--stola {
+  background-image: url("/images/stola.webp");
+}
+.panel--harrachov {
+  background-image: url("/images/harrachov.webp");
+}
+.panel--tanky {
+  background-image: url("/images/tanky.webp");
+}
+.panel--blaha {
+  background-image: url("/images/blaha.webp");
+}
+.panel__title {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+.panel--active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel--active {
+  flex: 8;
+}/*# sourceMappingURL=style.css.map */

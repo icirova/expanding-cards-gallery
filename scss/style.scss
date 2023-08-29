@@ -1,0 +1,107 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; margin: 0; padding: 0; }
+
+body {
+    height: 100vh;
+    overflow: hidden;
+
+    display: grid;
+    place-content: center;
+    justify-items: center;
+
+}
+
+
+.container {
+    display: flex;
+    width: 100vw;
+   
+
+    @media screen and (min-width: 480px) {
+        width: 90vw;
+    }
+        
+    }
+    
+
+
+.panel {
+
+    flex: 1;
+    height: 80vh;
+    margin: 10px;
+    border-radius: 50px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    //pozicování h3
+    display: grid;
+    justify-items: center;
+    align-items: end;
+
+    //vysouvání aktivního panel
+    transition: flex 0.7s ease-in;
+
+    //na malé obrazovce budou jen 3 karty
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+        display: none;
+    }
+
+    @media screen and (min-width: 480px) {
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+            display: grid;
+        }
+    }
+
+    
+
+    &--kost {
+        background-image: url("/images/kost.webp");
+    }
+
+    &--mumlava {
+        background-image: url("/images/mumlava.webp");
+    }
+    
+    &--stola {
+        background-image: url("/images/stola.webp");
+    }
+
+    &--harrachov {
+        background-image: url("/images/harrachov.webp");
+    }
+
+    &--tanky {
+        background-image: url("/images/tanky.webp");
+    }
+
+    &--blaha {
+        background-image: url("/images/blaha.webp");
+    }
+
+    &__title {
+       font-size: 24px; 
+       color: white;
+       margin-bottom: 10px;
+   
+       opacity: 0;
+
+       
+    }
+
+    &--active h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+       }
+
+     &--active {
+        flex: 8;
+    }
+}
+
