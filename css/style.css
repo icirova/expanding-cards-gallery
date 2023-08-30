@@ -15,14 +15,20 @@ body {
   place-content: center;
   justify-items: center;
 }
+@media screen and (max-width: 1200px) {
+  body {
+    overflow: scroll;
+    display: block;
+  }
+}
 
 .container {
   display: flex;
   width: 100vw;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .container {
-    width: 90vw;
+    display: block;
   }
 }
 
@@ -35,24 +41,27 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  display: grid;
-  justify-items: center;
-  align-items: end;
+  position: relative;
   transition: flex 0.7s ease-in;
 }
-.panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
-  display: none;
-}
-@media screen and (min-width: 480px) {
-  .panel:nth-of-type(4), .panel:nth-of-type(5), .panel:nth-of-type(6) {
-    display: grid;
+@media screen and (max-width: 1200px) {
+  .panel {
+    height: 10vh;
+    background-size: 100% auto;
+    transition: height 0.7s ease-in;
   }
 }
 .panel--kost {
   background-image: url("/images/kost.webp");
 }
+.panel--kost2 {
+  background-image: url("/images/kost2.webp");
+}
 .panel--mumlava {
   background-image: url("/images/mumlava.webp");
+}
+.panel--mumlava3 {
+  background-image: url("/images/mumlava3.webp");
 }
 .panel--stola {
   background-image: url("/images/stola.webp");
@@ -63,19 +72,39 @@ body {
 .panel--tanky {
   background-image: url("/images/tanky.webp");
 }
-.panel--blaha {
-  background-image: url("/images/blaha.webp");
+.panel--tanky2 {
+  background-image: url("/images/tanky2.webp");
+}
+.panel--iq {
+  background-image: url("/images/iq.webp");
+}
+.panel--iq2 {
+  background-image: url("/images/iq2.webp");
 }
 .panel__title {
   font-size: 24px;
   color: white;
-  margin-bottom: 10px;
   opacity: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .panel__title {
+    font-size: 16px;
+    bottom: 10px;
+    left: 30px;
+  }
 }
 .panel--active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
 .panel--active {
-  flex: 8;
+  flex: 10;
+}
+@media screen and (max-width: 1200px) {
+  .panel--active {
+    height: 30vh;
+  }
 }/*# sourceMappingURL=style.css.map */
