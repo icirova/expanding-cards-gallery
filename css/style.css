@@ -49,22 +49,22 @@ body {
   }
 }
 .panel--kost {
-  background-image: url("/images/kost.webp");
+  background-image: url("./images/kost.webp");
 }
 .panel--mumlava {
-  background-image: url("/images/mumlava.webp");
+  background-image: url("./images/mumlava.webp");
 }
 .panel--stola {
-  background-image: url("/images/stola.webp");
+  background-image: url("./images/stola.webp");
 }
 .panel--harrachov {
-  background-image: url("/images/harrachov.webp");
+  background-image: url("./images/harrachov.webp");
 }
 .panel--tanky {
-  background-image: url("/images/tanky.webp");
+  background-image: url("./images/tanky.webp");
 }
 .panel--blaha {
-  background-image: url("/images/blaha.webp");
+  background-image: url("./images/blaha.webp");
 }
 .panel__title {
   font-size: 24px;
