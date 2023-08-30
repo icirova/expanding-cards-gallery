@@ -1,1 +1,1 @@
-# expanding-cards-galery
+# expanding-cards-gallery
