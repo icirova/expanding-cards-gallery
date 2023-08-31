@@ -1,3 +1,3 @@
 # Expanding Cards Gallery
 
-Jedná se o galerii vlastních fotografií s efektem.
+Jedná se o galerii vlastních fotografií s efektem. Je responzivní.
