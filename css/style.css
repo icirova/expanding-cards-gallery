@@ -9,46 +9,54 @@ html {
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
   display: grid;
   place-content: center;
   justify-items: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1280px) {
   body {
-    overflow: scroll;
-    display: block;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
 .container {
-  display: flex;
   width: 100vw;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container {
-    display: block;
+    display: flex;
   }
 }
 
 .panel {
-  flex: 1;
-  height: 80vh;
+  height: 10vh;
   margin: 10px;
   border-radius: 50px;
-  background-size: auto 100%;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
   position: relative;
-  transition: flex 0.7s ease-in;
+  transition: height 0.7s ease-in;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 480px) {
+  .panel {
+    height: 15vh;
+  }
+}
+@media screen and (min-width: 768px) {
   .panel {
     height: 10vh;
-    background-size: 100% auto;
-    transition: height 0.7s ease-in;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .panel {
+    height: 90vh;
+    flex: 1;
+    transition: flex 0.7s ease-in;
+    background-size: auto 100%;
   }
 }
 .panel--kost {
@@ -82,18 +90,18 @@ body {
   background-image: url("/images/iq2.webp");
 }
 .panel__title {
-  font-size: 24px;
+  font-size: 16px;
   color: white;
   opacity: 0;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 10px;
+  left: 30px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .panel__title {
-    font-size: 16px;
-    bottom: 10px;
-    left: 30px;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
   }
 }
 .panel--active h3 {
@@ -101,10 +109,26 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 .panel--active {
-  flex: 10;
+  height: 30vh;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 480px) {
   .panel--active {
-    height: 30vh;
+    height: 90vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel--active {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .panel--active {
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .panel--active {
+    flex: 10;
+    height: 90vh;
   }
 }/*# sourceMappingURL=style.css.map */

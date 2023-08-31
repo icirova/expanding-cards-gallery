@@ -2,54 +2,55 @@ html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; margin: 0; padding: 0; }
 
 body {
-    height: 100vh;
-    overflow: hidden;
-
-    @media screen and (max-width: 1200px) {
-       
-        overflow: scroll;
-        display: block;
-    }
+    overflow: scroll;
 
     display: grid;
     place-content: center;
     justify-items: center;
+    
+    @media screen and (min-width: 1280px) {
+        height: 100vh;
+        overflow: hidden; 
+    }
 }
 
 .container {
-    display: flex;
     width: 100vw;
    
-    @media screen and (max-width: 1200px) {
-       display: block;
-    }
-        
+    @media screen and (min-width: 1280px) {
+        display: flex;
+    }     
 }
 
 .panel {
-    flex: 1;
-    height: 80vh;
-
+    height: 10vh;
     margin: 10px;
     border-radius: 50px;
-    background-size: auto 100%;
+    background-size: 100% auto;  
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 
     //pozicování h3
-
     position: relative;
 
+    //vysouvání aktivního panelu
+    transition: height 0.7s ease-in;
 
-    //vysouvání aktivního panel
-    transition: flex 0.7s ease-in;
+    @media screen and (min-width: 480px) {
+        height: 15vh; 
+      }
 
-    @media screen and (max-width: 1200px) {
-      
-        height: 10vh;
-        background-size: 100% auto;     
-        transition: height 0.7s ease-in;
+      @media screen and (min-width: 768px) {
+        height: 10vh; 
+      }
+    
+    
+    @media screen and (min-width: 1280px) {
+        height: 90vh;
+        flex: 1;
+        transition: flex 0.7s ease-in;
+        background-size: auto 100%;  
       }
 
     &--kost {
@@ -94,23 +95,18 @@ body {
 
     &__title {
     
-       font-size: 24px; 
+       font-size: 16px; 
        color: white;
-   
        opacity: 0;
-
        position: absolute;
-       bottom: 20px;
-       left: 20px;
+       bottom: 10px;
+       left: 30px;
 
-       @media screen and (max-width: 1200px) {
-            font-size: 16px;
-            bottom: 10px;
-            left: 30px;
-           
+       @media screen and (min-width: 1280px) {
+            font-size: 24px;
+            bottom: 20px;
+            left: 20px;  
        }
-
-       
     }
 
     &--active h3 {
@@ -119,11 +115,22 @@ body {
        }
 
      &--active {
-        flex: 10;
+        height: 30vh; 
 
-        @media screen and (max-width: 1200px) {
-            height: 30vh;     
-        
+        @media screen and (min-width: 480px) {
+           height: 90vh;
+       }
+
+       @media screen and (min-width: 768px) {
+        height: 80vh; 
+      }
+      @media screen and (min-width: 992px) {
+        height: 70vh; 
+      }
+       
+        @media screen and (min-width: 1280px) {
+            flex: 10;
+            height: 90vh;
        }
     }
 }
